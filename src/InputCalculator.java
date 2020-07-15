@@ -6,7 +6,7 @@ public class InputCalculator {
 
         int count = 0;
         int sum = 0;
-        int average = 0;
+        long average = 0;
 
         while (true){
             boolean isAnInt = scanner.hasNextInt();
@@ -23,9 +23,9 @@ public class InputCalculator {
             scanner.nextLine();
         }
 
-        average = sum/count;
+        average = Math.round ((double) sum/count);
 
-        System.out.println("SUM = " + sum + " AVG " + ((Math.round(average))));
+        System.out.println("SUM = " + sum + " AVG = " + (average));
         scanner.close();
     }
 }
